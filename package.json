@@ -16,6 +16,8 @@
   },
   "scripts": {
     "build": "vite build",
+    "build:chrome": "vite build",
+    "build:firefox": "TARGET_BROWSER=firefox vite build",
     "format": "prettier . --cache --write",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
     "lint:css": "stylelint \"**/*.css\"",
@@ -28,7 +30,8 @@
     "lint:js:fix": "eslint . --fix",
     "lint:types": "ember-tsc --noEmit",
     "start": "vite",
-    "test": "vite build --mode development && ember test --path dist"
+    "start:firefox": "TARGET_BROWSER=firefox vite",
+    "test": "vite build --mode development && ember test --path dist/chrome"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
