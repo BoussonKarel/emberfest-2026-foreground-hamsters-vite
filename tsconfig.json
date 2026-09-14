@@ -1,6 +1,6 @@
 {
   "extends": "@ember/app-tsconfig",
-  "include": ["app", "tests", "types", "chrome-scripts"],
+  "include": ["app", "tests", "types", "chrome-scripts", "manifest.config.mts"],
   "compilerOptions": {
     "allowJs": true,
     "paths": {
